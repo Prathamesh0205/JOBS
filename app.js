@@ -23,7 +23,7 @@ app.use('/api/v1/jobs',authetication,jobRouter);
 
 
 app.use(errorHandlerMiddleware);
-// app.set('trust proxy',1);
+app.set('trust proxy',1);
 app.use(rateLimiter({
   windowMs:15*60*1000,
   max:100
