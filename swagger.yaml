@@ -22,12 +22,12 @@ paths:
               allOf:
               - $ref: '#/components/schemas/RegisterRequest'
               - example:
-                  name: param
-                  email: prathameshgawande100@gmail.com
+                  name: om
+                  email: example123@gmail.com
                   password: secret
             example:
-              name: param
-              email: prathameshgawande100@gmail.com
+              name: sahil
+              email: example123@gmail.com
               password: secret
         required: true
       responses:
@@ -51,10 +51,10 @@ paths:
               allOf:
               - $ref: '#/components/schemas/loginrequest'
               - example:
-                  email: prathamesh100@gmail.com
+                  email: example123@gmail.com
                   password: secret
             example:
-              email: prathamesh100@gmail.com
+              email: example123@gmail.com
               password: secret
         required: true
       responses:
@@ -183,7 +183,7 @@ components:
           type: string
       example:
         name: param
-        email: prathameshgawande100@gmail.com
+        email: example123@gmail.com
         password: secret
     loginrequest:
       title: loginrequest
@@ -197,7 +197,7 @@ components:
         password:
           type: string
       example:
-        email: prathamesh100@gmail.com
+        email: example123@gmail.com
         password: secret
     createJobRequest:
       title: createJobRequest
