@@ -10,7 +10,7 @@ const xssclean=require("xss-clean");
 const cors=require("cors");
 const rateLimiter=require("express-rate-limit")
 // error handler
-const notFoundMiddleware = require('./middleware/not-found');
+
 const errorHandlerMiddleware = require('./middleware/error-handler');
 const authetication=require("./middleware/authentication");
 
@@ -35,7 +35,7 @@ app.use(xssclean());
 app.get("/",(req,res)=>{
   res.send("job api")
 })
-
+const notFoundMiddleware = require('./middleware/not-found');
 const port = process.env.PORT || 3000;
 
 const start = async () => {
