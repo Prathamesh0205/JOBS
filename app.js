@@ -18,11 +18,6 @@ app.use(express.json());
 // extra packages
 
 // routes
-app.use('/api/v1/auth',authRouter);
-app.use('/api/v1/jobs',authetication,jobRouter);
-
-
-app.use(errorHandlerMiddleware);
 app.set('trust proxy',1);
 app.use(rateLimiter({
   windowMs:15*60*1000,
@@ -35,7 +30,10 @@ app.use(xssclean());
 app.get("/",(req,res)=>{
   res.send("job api")
 })
+app.use(errorHandlerMiddleware);
 app.use(notFoundMiddleware);
+app.use('/api/v1/auth',authRouter);
+app.use('/api/v1/jobs',authetication,jobRouter);
 
 const port = process.env.PORT || 3000;
 
