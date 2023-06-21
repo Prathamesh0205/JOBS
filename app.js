@@ -32,6 +32,9 @@ app.use(helmet());
 app.use(cors());
 app.use(xssclean());
 
+app.get("/",(req,res)=>{
+  res.send("job api")
+})
 
 const port = process.env.PORT || 3000;
 
