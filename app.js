@@ -30,10 +30,11 @@ app.use(xssclean());
 app.get("/",(req,res)=>{
   res.send("job api")
 })
-app.use(errorHandlerMiddleware);
-app.use(notFoundMiddleware);
+
 app.use('/api/v1/auth',authRouter);
 app.use('/api/v1/jobs',authetication,jobRouter);
+app.use(errorHandlerMiddleware);
+app.use(notFoundMiddleware);
 
 const port = process.env.PORT || 3000;
 
