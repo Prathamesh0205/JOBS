@@ -30,9 +30,7 @@ app.use(helmet());
 app.use(cors());
 app.use(xssclean());
 
-app.get("/",(req,res)=>{
-  res.send("job api")
-})
+
 app.get("/",(req,res)=>
 {
   res.send("<h1>JobS api</h1> <a href='/api-docs'>Documentation</a>")
